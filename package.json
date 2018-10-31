@@ -1,0 +1,34 @@
+{
+  "name": "umi-plugin-material-dev",
+  "version": "0.0.1",
+  "description": "A umi plugin for develop a umi material with umi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-plugin-umi-plugin-material-dev"
+  },
+  "homepage": "https://github.com/umijs/umi-plugin-umi-plugin-material-dev",
+  "authors": [
+    "yutingzhao1991 <yutingzhao1991@sina.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/umijs/umi-plugin-umi-plugin-material-dev/issues"
+  },
+  "peerDependencies": {
+    "umi": "2.x"
+  },
+  
+  "main":  "lib/index.js",
+  "scripts": {
+    "build":  "umi-tools build",
+    "publish": "npm run build && npm publish"
+  },
+  "devDependencies": {
+    "umi-tools":  "*"
+  },
+  "files": [
+    "lib",
+    "src"
+  ]
+  
+}
