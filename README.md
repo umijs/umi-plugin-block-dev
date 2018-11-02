@@ -19,7 +19,9 @@ export default {
 
 ## Options
 
-TODO
+```js
+{}
+```
 
 ## LICENSE
 
