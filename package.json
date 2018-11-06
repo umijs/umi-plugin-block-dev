@@ -1,18 +1,18 @@
 {
   "name": "umi-plugin-block-dev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A umi plugin for develop a umi block with umi",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-plugin-umi-plugin-block-dev"
+    "url": "https://github.com/umijs/umi-plugin-block-dev"
   },
-  "homepage": "https://github.com/umijs/umi-plugin-umi-plugin-block-dev",
+  "homepage": "https://github.com/umijs/umi-plugin-block-dev",
   "authors": [
     "yutingzhao1991 <yutingzhao1991@sina.com>"
   ],
   "bugs": {
-    "url": "https://github.com/umijs/umi-plugin-umi-plugin-block-dev/issues"
+    "url": "https://github.com/umijs/umi-plugin-block-dev/issues"
   },
   "peerDependencies": {
     "umi": "2.x"
