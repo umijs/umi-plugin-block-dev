@@ -17,6 +17,12 @@ export default {
 }
 ```
 
+And you can use `create-umi` to create a umi block automatically:
+
+```sh
+$ yarn create umi --block
+```
+
 ## Options
 
 ```js
