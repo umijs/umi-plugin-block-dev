@@ -2,6 +2,8 @@
 // - https://umijs.org/plugin/develop.html
 import { join } from 'path';
 
+process.env.PAGES_PATH = 'src';
+
 export default function (api) {
   const { paths } = api;
 
@@ -10,7 +12,7 @@ export default function (api) {
       ...memo,
       routes: [{
         path: '/',
-        component: '../src/index',
+        component: 'index',
       }],
     };
   });
