@@ -12,7 +12,7 @@ export default function (api) {
       ...memo,
       routes: [{
         path: '/',
-        component: 'index',
+        component: './',
       }],
     };
   });
