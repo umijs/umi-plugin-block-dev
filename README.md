@@ -26,7 +26,9 @@ $ yarn create umi --block
 ## Options
 
 ```js
-{}
+{
+  layout: 'ant-design-pro',
+}
 ```
 
 ## LICENSE
