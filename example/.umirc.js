@@ -6,4 +6,7 @@ export default {
       layout: 'ant-design-pro',
     }],
   ],
+  cssModulesExcludes: [
+    join(__dirname, '../layouts/ant-design-pro/style.less'),
+  ],
 }

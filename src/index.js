@@ -25,13 +25,7 @@ export default function (api, options = {}) {
             component: './',
           }],
         }],
-        extraBabelIncludes: [
-          join(layout, 'index.js'),
-          join(layout, 'style.less'),
-        ],
-        cssModulesExcludes: [
-          join(layout, 'style.less'),
-        ],
+        extraBabelIncludes: [layout],
       };
     }
     return {
