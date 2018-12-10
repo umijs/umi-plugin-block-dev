@@ -1,16 +1,18 @@
 // ref:
 // - https://umijs.org/plugin/develop.html
 import { join, relative } from 'path';
+import assert from 'assert';
 
 process.env.PAGES_PATH = 'src';
+
+const layouts = ['ant-design-pro'];
 
 export default function (api, options = {}) {
   const { paths } = api;
 
-console.log('i am new');
-
   api.modifyDefaultConfig(memo => {
     if (options.layout) {
+      assert(layouts.includes(options.layout), `layout must be one of ${layouts.join(',')}`)
       const layout = join(__dirname, `../layouts/${options.layout}`);
       const pathToLayout = relative(paths.absPagesPath, layout);
       return {
@@ -24,7 +26,9 @@ console.log('i am new');
           }],
         }],
         extraBabelIncludes: [
-          join(layout, 'index.js'),
+          layout,
+        ],
+        cssModulesExcludes: [
           join(layout, 'style.less'),
         ],
       };

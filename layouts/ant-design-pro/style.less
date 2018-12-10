@@ -4,27 +4,25 @@ html, body {
   height: 100%;
 }
 
-:global {
-  #root {
-    height: 100%;
-  }
+#root {
+  height: 100%;
 }
 
-.container {
+.umi-block-dev {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   background-color: #f0f2f5;
 
-  .rightContainer {
+  .right {
     flex: auto;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
   }
 
-  .sideBar {
+  .side-bar {
     width: 256px;
     box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
     height: 100%;
@@ -56,17 +54,18 @@ html, body {
       font-weight: 600;
     }
   }
+
+  .top-bar {
+    background-color: #fff;
+    height: 64px;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    flex: 0 0 auto;
+  }
+  
+  .content {
+    position: relative;
+    flex: auto;
+    margin: 24px;
+  }  
 }
 
-.topBar {
-  background-color: #fff;
-  height: 64px;
-  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-  flex: 0 0 auto;
-}
-
-.content {
-  position: relative;
-  flex: auto;
-  margin: 24px;
-}
