@@ -26,7 +26,8 @@ export default function (api, options = {}) {
           }],
         }],
         extraBabelIncludes: [
-          layout,
+          join(layout, 'index.js'),
+          join(layout, 'style.less'),
         ],
         cssModulesExcludes: [
           join(layout, 'style.less'),
