@@ -7,11 +7,12 @@ process.env.PAGES_PATH = 'src';
 export default function (api, options = {}) {
   const { paths } = api;
 
+console.log('i am new');
+
   api.modifyDefaultConfig(memo => {
     if (options.layout) {
       const layout = join(__dirname, `../layouts/${options.layout}`);
       const pathToLayout = relative(paths.absPagesPath, layout);
-      console.log(pathToLayout);
       return {
         ...memo,
         routes: [{
@@ -22,7 +23,10 @@ export default function (api, options = {}) {
             component: './',
           }],
         }],
-        extraBabelIncludes: [layout],
+        extraBabelIncludes: [
+          join(layout, 'index.js'),
+          join(layout, 'style.less'),
+        ],
       };
     }
     return {

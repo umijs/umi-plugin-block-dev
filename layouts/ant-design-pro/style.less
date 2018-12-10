@@ -19,6 +19,9 @@ html, body {
 
   .rightContainer {
     flex: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
   }
 
   .sideBar {
@@ -27,6 +30,7 @@ html, body {
     height: 100%;
     background-color: #001529;
     z-index: 10;
+    flex: 0 0 256px;
   }
 
   .logo {
@@ -58,8 +62,11 @@ html, body {
   background-color: #fff;
   height: 64px;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  flex: 0 0 auto;
 }
 
 .content {
   position: relative;
+  flex: auto;
+  margin: 24px;
 }
