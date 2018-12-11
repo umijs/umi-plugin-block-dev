@@ -9,6 +9,7 @@ const layouts = ['ant-design-pro'];
 
 export default function (api, options = {}) {
   const { paths } = api;
+  const path = process.env.BLOCK_PATH || options.path || '/';
 
   api.modifyDefaultConfig(memo => {
     if (options.layout) {
@@ -21,7 +22,7 @@ export default function (api, options = {}) {
           path: '/',
           component: pathToLayout,
           routes: [{
-            path: '/',
+            path,
             component: './',
             exact: false,
           }],
@@ -32,7 +33,7 @@ export default function (api, options = {}) {
     return {
       ...memo,
       routes: [{
-        path: '/',
+        path,
         component: './',
         exact: false,
       }],
