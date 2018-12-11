@@ -23,6 +23,7 @@ export default function (api, options = {}) {
           routes: [{
             path: '/',
             component: './',
+            exact: false,
           }],
         }],
         extraBabelIncludes: [layout],
@@ -33,6 +34,7 @@ export default function (api, options = {}) {
       routes: [{
         path: '/',
         component: './',
+        exact: false,
       }],
     };
   });
