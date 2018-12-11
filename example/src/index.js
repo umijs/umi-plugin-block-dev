@@ -1,9 +1,14 @@
 import styles from './index.css';
+import { connect } from 'dva';
 
-export default function() {
+function Page(props) {
   return (
     <div className={styles.normal}>
-      I am a test block.
+      {props.test.text}
     </div>
   );
 }
+
+export default connect(({ test }) => ({
+  test,
+}))(Page);;
