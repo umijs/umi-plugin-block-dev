@@ -1,7 +1,7 @@
 import React from 'react';
 
-import styles from './style.less';
 import logo from './logo.svg';
+import './style.less';
 
 export default (props) => {
   const { children } = props;

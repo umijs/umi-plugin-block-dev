@@ -1,71 +1,73 @@
-html, body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-
-#root {
-  height: 100%;
-}
-
-.umi-block-dev {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  background-color: #f0f2f5;
-
-  .right {
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  .side-bar {
-    width: 256px;
-    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+:global {
+  html, body {
+    padding: 0;
+    margin: 0;
     height: 100%;
-    background-color: #001529;
-    z-index: 10;
-    flex: 0 0 256px;
-  }
-
-  .logo {
-    height: 64px;
-    position: relative;
-    line-height: 64px;
-    padding-left: 24px;
-    transition: all .3s;
-    background: #002140;
-    overflow: hidden;
-    img {
-      display: inline-block;
-      vertical-align: middle;
-      height: 32px;
-    }
-    h1 {
-      color: white;
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 20px;
-      margin: 0 0 0 12px;
-      font-family: Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-      font-weight: 600;
-    }
-  }
-
-  .top-bar {
-    background-color: #fff;
-    height: 64px;
-    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-    flex: 0 0 auto;
   }
   
-  .content {
-    position: relative;
-    flex: auto;
-    margin: 24px;
-  }  
-}
+  #root {
+    height: 100%;
+  }
+  
+  .umi-block-dev {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f2f5;
 
+    .right {
+      flex: auto;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    
+    .side-bar {
+      width: 256px;
+      box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+      height: 100%;
+      background-color: #001529;
+      z-index: 10;
+      flex: 0 0 256px;
+    }
+    
+    .logo {
+      height: 64px;
+      position: relative;
+      line-height: 64px;
+      padding-left: 24px;
+      transition: all .3s;
+      background: #002140;
+      overflow: hidden;
+
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        height: 32px;
+      }
+      h1 {
+        color: white;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 20px;
+        margin: 0 0 0 12px;
+        font-family: Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+      }
+    }
+    
+    .top-bar {
+      background-color: #fff;
+      height: 64px;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+      flex: 0 0 auto;
+    }
+    
+    .content {
+      position: relative;
+      flex: auto;
+      margin: 24px;
+    }  
+  }
+}
