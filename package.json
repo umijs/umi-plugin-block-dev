@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-block-dev",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "description": "A umi plugin for develop a umi block with umi",
   "license": "MIT",
   "repository": {
@@ -17,17 +17,22 @@
   "peerDependencies": {
     "umi": "2.x"
   },
-  "main":  "lib/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build":  "umi-tools build",
-    "publish": "npm run build && npm publish"
+    "build": "umi-tools build",
+    "publish": "npm run build && npm publish",
+    "test": "umi-test"
   },
   "devDependencies": {
-    "umi-tools":  "*"
+    "umi-test": "^1.2.2",
+    "umi-tools": "*"
   },
   "files": [
     "lib",
     "src",
     "layouts"
-  ]
+  ],
+  "dependencies": {
+    "path-to-regexp": "^2.4.0"
+  }
 }
