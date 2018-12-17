@@ -31,6 +31,11 @@ $ yarn create umi --block
 }
 ```
 
+### env
+
+- BLOCK_DEV_PATH: custom block preview path
+- BLOCK_DEV_MOCK_UMI_REQUEST: package mock data to build result, for build static preview site
+
 ## LICENSE
 
 MIT
