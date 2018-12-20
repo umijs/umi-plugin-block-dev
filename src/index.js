@@ -6,7 +6,7 @@ import assert from 'assert';
 
 process.env.PAGES_PATH = 'src';
 
-const layouts = ['ant-design-pro'];
+const layouts = ['ant-design-pro', 'ant-design-pro-user'];
 
 export default function (api, options = {}) {
   const { paths } = api;
