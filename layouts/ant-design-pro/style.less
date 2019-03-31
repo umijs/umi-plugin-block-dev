@@ -1,14 +1,15 @@
 :global {
-  html, body {
+  html,
+  body {
     padding: 0;
     margin: 0;
     height: 100%;
   }
-  
+
   #root {
     height: 100%;
   }
-  
+
   .umi-block-dev {
     height: 100%;
     width: 100%;
@@ -22,7 +23,7 @@
       flex-direction: column;
       overflow-x: hidden;
     }
-    
+
     .side-bar {
       width: 256px;
       box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
@@ -31,13 +32,13 @@
       z-index: 10;
       flex: 0 0 256px;
     }
-    
+
     .logo {
       height: 64px;
       position: relative;
       line-height: 64px;
       padding-left: 24px;
-      transition: all .3s;
+      transition: all 0.3s;
       background: #002140;
       overflow: hidden;
 
@@ -56,7 +57,7 @@
         font-weight: 600;
       }
     }
-    
+
     .top-bar {
       background-color: #fff;
       height: 64px;
@@ -64,11 +65,11 @@
       flex: 0 0 auto;
       z-index: 1; // TODO 看看为什么 pro 不需要这个也行，后面可以删掉
     }
-    
+
     .content {
       position: relative;
       flex: auto;
       margin: 24px;
-    }  
+    }
   }
 }
