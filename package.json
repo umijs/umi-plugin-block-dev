@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-block-dev",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "A umi plugin for develop a umi block with umi",
   "license": "MIT",
   "repository": {
@@ -21,6 +21,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "umi-tools build",
+    "prepublishOnly": "umi-tools build",
     "publish": "npm run build && npm publish",
     "test": "umi-test"
   },
@@ -34,6 +35,7 @@
     "layouts"
   ],
   "dependencies": {
+    "@ant-design/pro-layout": "^4.0.5",
     "path-to-regexp": "^2.4.0"
   }
 }

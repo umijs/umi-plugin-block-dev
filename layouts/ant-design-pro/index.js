@@ -1,24 +1,17 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import logo from './logo.svg';
-import './style.less';
-
+import { BasicLayout } from '@ant-design/pro-layout';
 export default props => {
   const { children } = props;
+  const [settings, changeSetting] = useState();
   return (
-    <div className="umi-block-dev">
-      <div className="side-bar">
-        <div className="logo">
-          <a href="/">
-            <img src={logo} alt="logo" />
-            <h1>Ant Design Pro</h1>
-          </a>
-        </div>
-      </div>
-      <div className="right">
-        <div className="top-bar" />
-        <div className="content">{children}</div>
-      </div>
-    </div>
+    <BasicLayout
+      logo={logo}
+      settings={settings}
+      {...props}
+      onChangeSetting={settings => changeSetting(settings)}
+    >
+      {children}
+    </BasicLayout>
   );
 };
