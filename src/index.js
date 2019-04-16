@@ -47,6 +47,7 @@ export default function(api, options = {}) {
       ...memo,
       routes: [
         {
+          ...options.menu,
           path,
           component: './',
           exact: false
