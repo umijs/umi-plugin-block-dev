@@ -4,6 +4,7 @@ import { BasicLayout } from '@ant-design/pro-layout';
 export default props => {
   const { children } = props;
   const [settings, changeSetting] = useState();
+  console.log(settings);
   return (
     <BasicLayout
       logo={logo}

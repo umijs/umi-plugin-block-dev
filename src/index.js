@@ -34,6 +34,7 @@ export default function(api, options = {}) {
             routes: [
               {
                 path,
+                ...options.menu,
                 component: './',
                 exact: false
               }
