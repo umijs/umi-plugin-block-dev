@@ -9,14 +9,17 @@ export default (url, options = {}, mockData) => {
   const { params, method = 'get' } = options;
   mockData = mockData || window.g_block_mock;
   const keys = Object.keys(mockData);
-  let mockInfo = keys.find((item) => {
-    let [ aMethod, aUrl ] = item.split(/\s+/);
+  let mockInfo = keys.find(item => {
+    let [aMethod, aUrl] = item.split(/\s+/);
     if (!aUrl) {
       aUrl = aMethod;
       aMethod = '*';
     }
-    if ((aMethod === '*' || aMethod.toLocaleLowerCase() === method.toLocaleLowerCase())
-      && isUrlMatch(aUrl, url)) {
+    if (
+      (aMethod === '*' ||
+        aMethod.toLocaleLowerCase() === method.toLocaleLowerCase()) &&
+      isUrlMatch(aUrl, url)
+    ) {
       return true;
     }
     return false;
@@ -26,10 +29,13 @@ export default (url, options = {}, mockData) => {
     mockInfo = mockData[mockInfo];
     let retData;
     if (typeof mockInfo === 'function') {
-      retData = mockInfo({
-        query: params,
-        params: {} // TODO
-      }, {});
+      retData = mockInfo(
+        {
+          query: params,
+          params: {} // TODO
+        },
+        {}
+      );
     } else {
       retData = mockInfo;
     }
