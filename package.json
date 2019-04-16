@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-block-dev",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "A umi plugin for develop a umi block with umi",
   "license": "MIT",
   "repository": {
@@ -22,7 +22,7 @@
   "scripts": {
     "build": "umi-tools build",
     "prepublishOnly": "umi-tools build",
-    "publish": "npm run build && npm publish",
+    "pub": "npm run build && npm publish",
     "test": "umi-test"
   },
   "devDependencies": {
