@@ -36,6 +36,7 @@
   ],
   "dependencies": {
     "@ant-design/pro-layout": "^4.0.5",
-    "path-to-regexp": "^2.4.0"
+    "path-to-regexp": "^2.4.0",
+    "uppercamelcase": "^3.0.0"
   }
 }
