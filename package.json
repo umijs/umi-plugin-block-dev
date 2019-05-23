@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-block-dev",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "A umi plugin for develop a umi block with umi",
   "license": "MIT",
   "repository": {

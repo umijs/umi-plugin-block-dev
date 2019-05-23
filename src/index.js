@@ -33,13 +33,13 @@ export function getNameFromPkg(pkg) {
 export default function(api, options = {}) {
   const { paths, debug } = api;
   const path = process.env.BLOCK_DEV_PATH || options.path || '/';
-  const blockConfig = require(join(process.cwd(), 'package.json')).blockConfig;
+  const blockConfig = require(join(paths.cwd, 'package.json')).blockConfig;
 
   let subBlocks = [];
 
   if (blockConfig && blockConfig.dependencies) {
     debug('find dependencies in package.json');
-    const gitRoot = findGitDir(process.cwd());
+    const gitRoot = findGitDir(paths.cwd);
     debug(`get gitRoot: ${gitRoot}`);
     if (gitRoot) {
       subBlocks = blockConfig.dependencies.map(d => {
