@@ -9,7 +9,10 @@ export default props => {
       <BasicLayout logo={logo} {...props} {...settings}>
         {children}
       </BasicLayout>
-      <SettingDrawer onSettingChange={settings => changeSetting(settings)} />
+      <SettingDrawer
+        settings={settings}
+        onSettingChange={settings => changeSetting(settings)}
+      />
     </React.Fragment>
   );
 };
