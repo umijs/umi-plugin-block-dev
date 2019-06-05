@@ -23,11 +23,16 @@ And you can use `create-umi` to create a umi block automatically:
 $ yarn create umi --block
 ```
 
-## Options
+## options
 
 ```js
 {
-  layout: 'ant-design-pro',
+  layout: 'ant-design-pro', // or ant-design-pro-user
+  menu: {
+    name: 'demo',
+    icon: 'home',
+  },
+  mockUmiRequest: true // whether to build mock data . _mock.js
 }
 ```
 

@@ -5,7 +5,12 @@ export default {
     [
       join(__dirname, '..', require('../package').main || 'index.js'),
       {
-        layout: 'ant-design-pro'
+        layout: 'ant-design-pro',
+        menu: {
+          name: 'demo',
+          icon: 'home',
+        },
+        mockUmiRequest: true // whether to build mock data . _mock.js \ _mock.ts
       }
     ],
     [
