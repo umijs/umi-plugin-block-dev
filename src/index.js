@@ -9,7 +9,7 @@ if (!process.env.PAGES_PATH) {
   process.env.PAGES_PATH = 'src';
 }
 
-const layouts = ['ant-design-pro', 'ant-design-pro-user'];
+const layouts = ['ant-design-pro', 'ant-design-pro-user', 'blankLayout'];
 
 function findGitDir(thePath) {
   if (thePath === '/') {
@@ -37,6 +37,7 @@ export default function(api, options = {}) {
 
   let subBlocks = [];
 
+  // 支持区块依赖
   if (blockConfig && blockConfig.dependencies) {
     debug('find dependencies in package.json');
     const gitRoot = findGitDir(paths.cwd);
@@ -56,10 +57,12 @@ export default function(api, options = {}) {
     }
   }
 
+  // 是否 mock 数据，用于测试
   const mockUmiRequest =
     process.env.BLOCK_DEV_MOCK_UMI_REQUEST === 'true' ||
     options.mockUmiRequest ||
     false;
+
   api.modifyDefaultConfig(memo => {
     // 这个环境变量是为了截图的时候可以动态设置 layout
     // 所以会优先从 环境变量里面取
