@@ -1,14 +1,22 @@
 import styles from './index.css';
 import { connect } from 'dva';
 
-function Page(props) {
-  return (
-    <div className={styles.normal}>
-      {props.test.text}
-    </div>
-  );
-}
+import React from 'react';
+
+const Welcome = () => (
+  <div style={{ textAlign: 'center' }} className={styles.normal}>
+    Want to add more pages? Please refer to{' '}
+    <a
+      href="https://pro.ant.design/docs/block-cn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      use block
+    </a>
+    。
+  </div>
+);
 
 export default connect(({ test }) => ({
-  test,
-}))(Page);;
+  test
+}))(Welcome);
