@@ -5,6 +5,20 @@
 
 A umi plugin for develop a umi block with umi
 
+## Layout
+
+### blankLayout
+
+![image](https://user-images.githubusercontent.com/8186664/59409733-83d23a80-8de9-11e9-9a0b-e41b8b4ce5a8.png)
+
+### ant-design-pro
+
+![image](https://user-images.githubusercontent.com/8186664/59409669-52f20580-8de9-11e9-8f4f-23ee873efe1b.png)
+
+### ant-design-pro-user
+
+![image](https://user-images.githubusercontent.com/8186664/59409597-1f16e000-8de9-11e9-8993-e68ec1b4da0e.png)
+
 ## Usage
 
 Configure in `.umirc.js`,
