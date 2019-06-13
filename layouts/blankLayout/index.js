@@ -1,6 +1,10 @@
 import React from 'react';
-import styles from './index.less';
+import { BasicLayout } from '@ant-design/pro-layout';
 
-const Layout = ({ children }) => <div className={styles.main}>{children}</div>;
+const Layout = ({ children }) => (
+  <BasicLayout menuRender={false} headerRender={false}>
+    {children}
+  </BasicLayout>
+);
 
 export default Layout;
