@@ -6,3 +6,4 @@
 /lib
 .umi
 .umi-production
+yarn-error.log

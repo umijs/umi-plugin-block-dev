@@ -48,7 +48,7 @@ export default function(api, options = {}) {
         const subBlockName = upperCamelCase(getNameFromPkg(subBlockConfig));
         return {
           name: subBlockName,
-          path: subBlockPath,
+          path: subBlockPath
         };
       });
     } else {
@@ -61,12 +61,16 @@ export default function(api, options = {}) {
     options.mockUmiRequest ||
     false;
   api.modifyDefaultConfig(memo => {
-    if (options.layout) {
+    // 这个环境变量是为了截图的时候可以动态设置 layout
+    // 所以会优先从 环境变量里面取
+    const layoutConfig = process.env.BLOCK_PAGES_LAYOUT || options.layout;
+
+    if (layoutConfig) {
       assert(
-        layouts.includes(options.layout),
+        layouts.includes(layoutConfig),
         `layout must be one of ${layouts.join(',')}`
       );
-      const layout = join(__dirname, `../layouts/${options.layout}`);
+      const layout = join(__dirname, `../layouts/${layoutConfig}`);
       const pathToLayout = relative(paths.absPagesPath, layout);
       return {
         ...memo,
@@ -84,7 +88,7 @@ export default function(api, options = {}) {
             ]
           }
         ],
-        extraBabelIncludes: [layout].concat(subBlocks.map(b => b.path)),
+        extraBabelIncludes: [layout].concat(subBlocks.map(b => b.path))
       };
     }
     return {
