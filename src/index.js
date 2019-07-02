@@ -30,7 +30,7 @@ export function getNameFromPkg(pkg) {
   return pkg.name.split('/').pop();
 }
 
-export default function(api, options = {}) {
+export default function (api, options = {}) {
   const { paths, debug } = api;
   const path = process.env.BLOCK_DEV_PATH || options.path || '/';
   const blockConfig = require(join(paths.cwd, 'package.json')).blockConfig;
