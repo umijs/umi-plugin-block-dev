@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-block-dev",
-  "version": "2.1.12",
+  "version": "2.2.0-beta.0",
   "description": "A umi plugin for develop a umi block with umi",
   "license": "MIT",
   "repository": {
@@ -26,6 +26,9 @@
     "test": "umi-test"
   },
   "devDependencies": {
+    "@ant-design/pro-layout": "^4.3.0",
+    "umi-plugin-react": "^1.9.7",
+    "umi-request": "^1.0.8",
     "umi-test": "^1.2.2",
     "umi-tools": "*"
   },
@@ -35,7 +38,6 @@
     "layouts"
   ],
   "dependencies": {
-    "@ant-design/pro-layout": "^4.3.0",
     "path-to-regexp": "^2.4.0",
     "uppercamelcase": "^3.0.0"
   }
