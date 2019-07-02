@@ -26,7 +26,6 @@
     "test": "umi-test"
   },
   "devDependencies": {
-    "@ant-design/pro-layout": "^4.3.0",
     "umi-plugin-react": "^1.9.7",
     "umi-request": "^1.0.8",
     "umi-test": "^1.2.2",
@@ -38,6 +37,7 @@
     "layouts"
   ],
   "dependencies": {
+    "@ant-design/pro-layout": "^4.3.0",
     "path-to-regexp": "^2.4.0",
     "uppercamelcase": "^3.0.0"
   }
