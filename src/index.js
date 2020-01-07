@@ -30,7 +30,13 @@ export function getNameFromPkg(pkg) {
   return pkg.name.split('/').pop();
 }
 
-export default function (api, options = {}) {
+export default function(api, options = {}) {
+  api.registerCommand('block_dev', {}, ({ _ }) => {
+    process.env.PAGES_PATH = `${_[0]}/src`;
+    process.env.UMI_UI = 'none';
+    require(require.resolve(`umi/lib/scripts/dev`));
+  });
+
   const { paths, debug } = api;
   const path = process.env.BLOCK_DEV_PATH || options.path || '/';
   const blockConfig = require(join(paths.cwd, 'package.json')).blockConfig;
@@ -74,7 +80,7 @@ export default function (api, options = {}) {
         `layout must be one of ${layouts.join(',')}`
       );
       const layout = join(__dirname, `../layouts/${layoutConfig}`);
-      const pathToLayout = relative(paths.absPagesPath, layout);
+      const pathToLayout = (paths.absPagesPath, layout);
       return {
         ...memo,
         routes: [
@@ -114,8 +120,8 @@ export default function (api, options = {}) {
       specifier: '__block_mock'
     });
     api.addEntryCodeAhead(`
-      window.g_block_mock = __block_mock;
-    `);
+        window.g_block_mock = __block_mock;
+      `);
     api.chainWebpackConfig(webpackConfig => {
       webpackConfig.resolve.alias.set(
         'umi-request$',

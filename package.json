@@ -16,8 +16,8 @@
     "url": "https://github.com/umijs/umi-plugin-block-dev/issues"
   },
   "peerDependencies": {
-    "umi": "2.x",
-    "@ant-design/pro-layout": "^4.3.0"
+    "@ant-design/pro-layout": "^4.3.0",
+    "umi": "2.x"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -39,6 +39,7 @@
   ],
   "dependencies": {
     "path-to-regexp": "^2.4.0",
+    "umi": "^2.12.9",
     "uppercamelcase": "^3.0.0"
   }
 }
