@@ -1,6 +1,6 @@
 // ref:
 // - https://umijs.org/plugin/develop.html
-import { join, relative, dirname } from 'path';
+import { join, dirname } from 'path';
 import { existsSync, readdirSync } from 'fs';
 import assert from 'assert';
 import upperCamelCase from 'uppercamelcase';

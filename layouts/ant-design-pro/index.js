@@ -9,6 +9,9 @@ export default props => {
   return (
     <React.Fragment>
       <BasicLayout
+        contentStyle={{
+          minHeight: '100vh'
+        }}
         logo={logo}
         {...props}
         {...settings}
