@@ -129,7 +129,13 @@ export default function(api, options = {}) {
       );
     });
   }
-
+  api.addHTMLStyle({
+    content: `
+     body,html,#root{
+       height:100%
+     }
+    `
+  });
   api.chainWebpackConfig(webpackConfig => {
     webpackConfig.resolve.alias.set('@', join(paths.absSrcPath, '@'));
     subBlocks.forEach(b => {
