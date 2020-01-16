@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-block-dev",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A umi plugin for develop a umi block with umi",
   "license": "MIT",
   "repository": {
@@ -16,7 +16,7 @@
     "url": "https://github.com/umijs/umi-plugin-block-dev/issues"
   },
   "peerDependencies": {
-    "@ant-design/pro-layout": "^4.3.0",
+    "@ant-design/pro-layout": "^4.11.0-1",
     "umi": "2.x"
   },
   "main": "lib/index.js",
